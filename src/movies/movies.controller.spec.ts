@@ -2,12 +2,10 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { MoviesController } from './movies.controller';
 import { MoviesService } from './movies.service';
 import { getRepositoryToken } from '@nestjs/typeorm'; // 1. Importar el token
-import { Movie } from './entities/movie.entity';      // 2. Importar la entidad
-
+import { Movie } from './entities/movie.entity'; // 2. Importar la entidad
 
 describe('MoviesController', () => {
   let controller: MoviesController;
-
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
@@ -27,10 +25,8 @@ describe('MoviesController', () => {
       ],
     }).compile();
 
-
     controller = module.get<MoviesController>(MoviesController);
   });
-
 
   it('should be defined', () => {
     expect(controller).toBeDefined();

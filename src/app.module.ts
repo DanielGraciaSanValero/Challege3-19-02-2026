@@ -22,4 +22,4 @@ import { MoviesModule } from './movies/movies.module';
     MoviesModule,
   ],
 })
-export class AppModule { }
+export class AppModule {}

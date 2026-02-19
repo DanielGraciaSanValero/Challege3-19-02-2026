@@ -8,7 +8,7 @@ import { Movie } from './entities/movie.entity'; // O la interfaz que uses
 @ApiTags('movies')
 @Controller('api/movies')
 export class MoviesController {
-  constructor(private readonly moviesService: MoviesService) { }
+  constructor(private readonly moviesService: MoviesService) {}
 
   @Get()
   async getMovies(): Promise<MovieDto[]> {
